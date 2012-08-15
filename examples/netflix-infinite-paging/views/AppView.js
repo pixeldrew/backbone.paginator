@@ -8,8 +8,10 @@
 			var tags = this.collection;
 
 			tags.on('add', this.addOne, this);
-			tags.on('reset', this.addAll, this);
+//			tags.on('reset', this.addAll, this);
 			tags.on('all', this.render, this);
+
+			tags.on('sync', this.addAll, this);
 
 			tags.pager();
 
